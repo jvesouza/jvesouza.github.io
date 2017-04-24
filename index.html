@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>index</title>
+<!-- 2017-04-23 Sun 21:06 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="José Vilmar Estácio de Souza" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">index</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introdução</a>
+<ul>
+<li><a href="#sec-1-1">1.1. emacs</a></li>
+<li><a href="#sec-1-2">1.2. emacspeak </a></li>
+<li><a href="#sec-1-3">1.3. Conceitos utilizados no emacs</a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1. buffer</a></li>
+<li><a href="#sec-1-3-2">1.3.2. point</a></li>
+<li><a href="#sec-1-3-3">1.3.3. mark</a></li>
+<li><a href="#sec-1-3-4">1.3.4. region</a></li>
+<li><a href="#sec-1-3-5">1.3.5. Visitar um arquivo</a></li>
+<li><a href="#sec-1-3-6">1.3.6. mini buffer</a></li>
+<li><a href="#sec-1-3-7">1.3.7. Comandos do emacs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Editar um arquivo utilizando o emacs</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Inserindo e removendo texto de um buffer</a></li>
+<li><a href="#sec-2-2">2.2. Navegando em um buffer</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Teclas de atalho</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Descrição</a></li>
+<li><a href="#sec-3-2">3.2. Algumas teclas de atalho do emacs</a>
+<ul>
+<li><a href="#sec-3-2-1">3.2.1. Atalhos de uso geral</a></li>
+<li><a href="#sec-3-2-2">3.2.2. Atalhos para tratar arquivos</a></li>
+<li><a href="#sec-3-2-3">3.2.3. Atalhos para pesquisa de textos em um buffer</a></li>
+<li><a href="#sec-3-2-4">3.2.4. Atalhos para tratar region</a></li>
+<li><a href="#sec-3-2-5">3.2.5. Atalhos para navegação</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introdução</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Sou usuário do Linux há mais de vinte anos e sempre tive vontade de
+testar o emacs juntamente com o emacspeak. Isso nunca foi possível por
+falta de recursos ou por falta de tempo. Agora que consegui conciliar
+esses dois fatores estou me aventurando nesse mundo. O objetivo
+principal desse documento é transmitir aos leitores algumas noções
+básicas sobre o emacs e o emacspeak, bem como registrar o meu
+aprendizado.
+</p>
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> emacs</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+   O GNU emacs, um editor criado por Richard Stallman, teve a sua
+primeira versão lançada em 1985.  Além de ser utilizado como um editor
+de textos para vários tipos de arquivos, o emacs possui recursos que
+permitem a sua utilização como um gerenciador de tarefas.  Podemos por
+exemplo utilizar o emacs para operar em:
+</p>
+<ul class="org-ul">
+<li>Arquivos
+<ol class="org-ol">
+<li>Editar
+</li>
+<li>Copiar
+</li>
+<li>Remover
+</li>
+<li>Renomear
+</li>
+</ol>
+</li>
+
+<li>e-mails
+<ol class="org-ol">
+<li>Ler
+</li>
+<li>Enviar
+</li>
+</ol>
+</li>
+
+<li>Shell
+<ol class="org-ol">
+<li>Executar comandos
+</li>
+</ol>
+</li>
+
+<li>Programas
+<ol class="org-ol">
+<li>Compilar
+</li>
+<li>Executar
+</li>
+<li>Depurar a execução
+</li>
+</ol>
+</li>
+
+<li>Navegar na internet
+</li>
+<li>E muitas outras operações
+</li>
+</ul>
+
+<p>
+Esses recursos permitem que um desenvolvedor possa executar
+praticamente todas as tarefas a partir do emacs sem precisar mudar
+para outro ambiente.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> emacspeak <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup></h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Em 25 de abril de 1995, T. V. Raman, um funcionário cego da Adobe,
+criou a primeira versão do emacspeak. O emacspeak é uma aplicação
+integrada ao emacs que apresenta usando um sintetizador de voz o
+conteúdo produzido pelo emacs.  Talvez essa seja uma descrição modesta
+do emacspeak, já que ele pode ser considerado um desktop falante que
+inclui além da leitura de tela, ícones sonoros, e uma versatilidade
+praticamente ilimitada.  Por exemplo, numa versão recente, o Raman
+lançou paisagens sonoras, uma opção que ajuda a descansar nossos
+ouvidos depois de um longo dia, permitindo que continuemos usando o
+sistema mas com sons da natureza tocando junto ao sintetizador. O
+autor testou e falou que aliviaram o seu cansaço.
+</p>
+
+<p>
+Já foi dito que o Emacs, e por consequência o Emacspeak, são um
+sistema operacional leve e não um editor pesado, por ter tanta
+funcionalidade.
+</p>
+
+<p>
+O emacspeak permite que uma pessoa cega possa utilizar um computador a
+partir do emacs, desde que essa pessoa saiba utilizar esse editor.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> <a id="Conceitos-utilizados-no-emacs" name="Conceitos-utilizados-no-emacs">Conceitos utilizados no emacs</a></h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Antes de começar a utilizar o emacs, é preciso conhecer alguns
+conceitos empregados nessa ferramenta.
+</p>
+</div>
+<div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> <a id="buffer" name="buffer">buffer</a></h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Um objeto utilizado pelo emacs para armazenar algum tipo de texto.
+Toda vez que um arquivo é aberto, o emacs cria um <a href="#buffer">buffer</a> para
+armazenar o conteúdo do arquivo aberto.  Da mesma forma, se visitamos
+um diretório utilizando o emacs, um <a href="#buffer">buffer</a> é criado para armazenar a
+lista de objetos do diretório.  O mesmo vale para quando estamos lendo
+ou enviando e-mails, navegando na internet, lendo a documentação do
+emacs e etc.  Cada <a href="#buffer">buffer</a> criado no emacs possui um nome único, e boa
+parte das operações executadas no emacs atuam no <a href="#buffer">buffer</a> corrente.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> <a id="point" name="point">point</a></h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+A posição atual do cursor no <a href="#buffer">buffer</a> mostra o local aonde a maioria dos
+comandos de edição terão efeito. O emacs se refere a essa posição pelo
+nome de <a href="#point">point</a>.  A posição sempre é atualizada quando algo é inserido
+ou removido.  Por padrão, o cursor no <a href="#buffer">buffer</a> corrente é mostrado como
+um bloco sólido e parece estar em um caractere, mas você deve pensar
+no <a href="#point">point</a> como se ele estivesse entre dois caracteres; Ele está situado
+antes do caractere sob o cursor.  Por exemplo, no texto 'tste' com o
+cursor sobre o 's', então o <a href="#point">point</a> está entre o 't' e o 's' Se
+inserirmos um 'e', esse caractere será inserido antes do 's' e o <a href="#point">point</a>
+será posicionado entre o 'e' e o 's', sendo que o cursor permanecerá
+sob o 's'. O emacs possui comandos para mover o <a href="#point">point</a> para outra
+posição e cada <a href="#buffer">buffer</a> possui um <a href="#point">point</a> individual.  Apenas como
+curiosidade, o termo "<a href="#point">point</a>" vem do caractere ".", Que era o comando
+em TECO para acessar a posição de edição. O teco é a linguagem em que
+o Emacs original foi escrito.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3"><span class="section-number-4">1.3.3</span> <a id="mark" name="mark">mark</a></h4>
+<div class="outline-text-4" id="text-1-3-3">
+<p>
+Uma marca lógica colocada na posição do <a href="#buffer">buffer</a> identificada pelo
+<a href="#point">point</a>. Essa marca serve para salvar o valor do <a href="#point">point</a> no momento em que
+ela foi inserida. Várias marcas podem ser atribuídas.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4"><span class="section-number-4">1.3.4</span> <a id="region" name="region">region</a></h4>
+<div class="outline-text-4" id="text-1-3-4">
+<p>
+um bloco de texto no <a href="#buffer">buffer</a> delimitado por um <a href="#mark">mark</a> e pelo o
+<a href="#point">point</a>. Vários <a href="#Comandos-do-emacs">comandos do emacs</a> atuam em uma <a href="#region">region</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-5" class="outline-4">
+<h4 id="sec-1-3-5"><span class="section-number-4">1.3.5</span> <a id="Visitar-um-arquivo" name="Visitar-um-arquivo">Visitar um arquivo</a></h4>
+<div class="outline-text-4" id="text-1-3-5">
+<p>
+Abrir um arquivo para leitura ou para edição. Quando um arquivo é visitado, o seu conteúdo é copiado para um novo <a href="#buffer">buffer</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-6" class="outline-4">
+<h4 id="sec-1-3-6"><span class="section-number-4">1.3.6</span> <a id="mini-buffer" name="mini-buffer">mini buffer</a></h4>
+<div class="outline-text-4" id="text-1-3-6">
+<p>
+Um <a href="#buffer">buffer</a> especial utilizado pelo emacs para interagir com o usuário.
+Quando por exemplo queremos <a href="#Visitar-um-arquivo">Visitar um arquivo</a> ou executar um comando, 
+o emacs pergunta o nome do arquivo ou o comando a ser executado utilizando o <a href="#mini-buffer">mini buffer</a>.
+O <a href="#mini-buffer">mini buffer</a> também salva o histórico de interações anteriores permitindo
+o reaproveitamento de digitações prévias utilizando <a href="#Comandos-do-emacs">comandos do emacs</a>.
+O <a href="#mini-buffer">mini buffer</a> permite ainda que a tecla tab seja utilizada no complemento de 
+<a href="#Comandos-do-emacs">comandos do emacs</a> e na digitação do nome de arquivos
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-7" class="outline-4">
+<h4 id="sec-1-3-7"><span class="section-number-4">1.3.7</span> <a id="Comandos-do-emacs" name="Comandos-do-emacs">Comandos do emacs</a></h4>
+<div class="outline-text-4" id="text-1-3-7">
+<p>
+Qualquer operação realizada no emacs é feita através da execução de um
+comando, que pode ou não estar associado à <a href="#Teclas-de-atalho">teclas de atalho</a>.  Se
+queremos por exemplo <a href="#Visitar-um-arquivo">visitar um arquivo</a>, podemos executar o comando
+find-file ou pressionar a combinação de tecla <a href="#C-x">C-x</a> <a href="#C-f">C-f</a>, que por padrão
+está associada ao comando find-file.
+</p>
+
+<p>
+Para executar o comando find-file nós pressionamos a combinação  <a href="#M-x">M-x</a>, 
+digitamos find-file e pressionamos a tecla RET (tecla enter).
+Feito isso, o emacs utilizando o <a href="#mini-buffer">mini buffer</a> vai nos pedir o nome
+do arquivo a ser visitado. Digitamos o nome do arquivo e pressionamos RET.
+Será criado um novo <i>buffer</i> com o conteúdo do arquivo caso ele exista
+ou um <i>buffer</i> vazio caso o arquivo não exista.
+</p>
+
+<p>
+A qualquer momento é possível utilizar a tecla tab para completar algo
+faltante.  Podemos pressionar <a href="#M-x">M-x</a>, digitar find-fi e pressionar a
+tecla tab. O emacs vai completar o restante do comando find-file.  O
+mesmo se aplica quando estamos digitando o nome do arquivo a ser
+visitado.  É possível digitar parte do nome do arquivo e pressionar a
+tecla TAB para o complemento.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Editar um arquivo utilizando o emacs</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Antes de ler essa sessão, recomendamos que você leia a sessão <a href="#Conceitos-utilizados-no-emacs">Conceitos utilizados no emacs</a> 
+e a sessão descrição em <a href="#Teclas-de-atalho">teclas de atalho</a> no emacs.
+</p>
+
+<p>
+Para editarmos um arquivo no emacs precisaremos inicialmente copiar o seu conteúdo para um <a href="#buffer">buffer</a>.
+  Para tal devemos utilizar a combinação de teclas <a href="#C-x">C-x</a> <a href="#C-f">C-f</a>. 
+</p>
+
+<p>
+Assim que pressionamos essa combinação de teclas,
+o emacs, utilizando o <a href="#mini-buffer">mini buffer</a>, vai solicitar o nome do arquivo a ser visitado.
+Digite o nome do arquivo e pressione a tecla RET para que o emacs copie o seu conteúdo para um novo <a href="#buffer">buffer</a>.
+Caso o arquivo não exista, um <a href="#buffer">buffer</a> vazio será criado.
+</p>
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Inserindo e removendo texto de um <a href="#buffer">buffer</a></h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Uma vez criado um <a href="#buffer">buffer</a>  e desde que ele não seja somente para leitura, 
+podemos inserir e remover texto no mesmo sem restrições.
+Qualquer tecla pressionada, desde que não esteja associada a algum comando, 
+terá a sua representação inserida no <a href="#buffer">buffer</a> na posição identificada pelo <a href="#point">point</a>.
+</p>
+
+<p>
+A tecla del remove o carácter na posição indicada pelo <a href="#point">point</a> e a tecla 
+backspace remove o carácter anterior ao carácter indicado pelo <a href="#point">point</a>.
+Após a remoção ou a inserção de um caractere, o <a href="#point">point</a> será atualizado para refletir a nova posição.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Navegando em um <a href="#buffer">buffer</a></h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Além  das setas do teclado normal, existe também um conjunto de <a href="#Atalhos-para-navega-o">Atalhos para navegação</a> em um <a href="#buffer">buffer</a>.
+Todas as teclas de navegação atualizam o <a href="#point">point</a>
+ e algumas  foram remapeadas pelo emacspeak.
+Veja uma descrição completa das teclas em <a href="#Atalhos-para-navega-o">Atalhos para navegação</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> <a id="Teclas-de-atalho" name="Teclas-de-atalho">Teclas de atalho</a></h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Descrição</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Boa parte dos comandos no emacs podem ser executados através de <a href="#Teclas-de-atalho">teclas
+de atalho</a>.  Existem duas teclas importantes no emacs, a tecla Control
+e a tecla meta, tecla Alt do Windows. Caso o seu teclado não possua a
+tecla Alt ou você não possa utilizá-la por alguma razão, você pode
+fazer uso da tecla escape. A notação para referenciar atalho de teclas
+no emacs usa a seguinte convenção: A letra C com traço e outra letra,
+é Control mais a outra tecla. Por exemplo:
+</p>
+
+<dl class="org-dl">
+<dt> <a href="#C-f">C-f</a> </dt><dd>devemos pressionar control+f
+</dd>
+<dt> <a href="#C-x">C-x</a> </dt><dd>devemos pressionar control+x
+</dd>
+<dt> <a href="#C-e">C-e</a> s </dt><dd>devemos pressionar control+e e depois a tecla s, liberando antes a tecla control e a tecla e.
+</dd>
+</dl>
+<p>
+Também é usada a letra M para indicar a tecla que é chamada Meta, ou seja, a tecla mais conhecida como tecla Alt. Por exemplo: 
+</p>
+<dl class="org-dl">
+<dt> <a href="#M-x">M-x</a> </dt><dd>devemos pressionar as teclas Alt+x
+</dd>
+<dt> M-r </dt><dd>devemos pressionar as teclas Alt+r
+</dd>
+</dl>
+
+<p>
+Caso você não queira ou não possa utilizar a tecla Alt, pressione e
+libera a tecla escape e pressione a tecla x ou r, dependendo do
+exemplo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> <a id="Algumas-teclas-de-atalho-do-emacs" name="Algumas-teclas-de-atalho-do-emacs">Algumas teclas de atalho do emacs</a></h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+A tabela a seguir contem as principais <a href="#Teclas-de-atalho">teclas de atalho</a> do emacs bem
+como o comando associado a cada uma delas.
+</p>
+</div>
+
+<div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> <a id="Atalhos-de-uso-geral" name="Atalhos-de-uso-geral">Atalhos de uso geral</a></h4>
+<div class="outline-text-4" id="text-3-2-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> <a href="#Atalhos-de-uso-geral">Atalhos de uso geral</a></caption>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Sequencia de teclas</th>
+<th scope="col" class="left">Descrição</th>
+<th scope="col" class="left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left"><a id="M-x" name="M-x">M-x</a></td>
+<td class="left">Executa um comando do emacs <sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup></td>
+<td class="left">execute-extended-command</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-x-C-c" name="C-x-C-c">C-x C-c</a></td>
+<td class="left">Finaliza o emacs <sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup> <sup>, </sup><sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup></td>
+<td class="left">save-buffers-kill-terminal</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2"><span class="section-number-4">3.2.2</span> <a id="Atalhos-para-tratar-arquivos" name="Atalhos-para-tratar-arquivos">Atalhos para tratar arquivos</a></h4>
+<div class="outline-text-4" id="text-3-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 2:</span> <a href="#Atalhos-para-tratar-arquivos">Atalhos para tratar arquivos</a></caption>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Sequencia de teclas</th>
+<th scope="col" class="left">Descrição</th>
+<th scope="col" class="left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left"><a id="C-x-C-f" name="C-x-C-f">C-x C-f</a></td>
+<td class="left">Visita um arquivo para edição, criando um novo <i>buffer</i></td>
+<td class="left">find-file</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-x-C-s" name="C-x-C-s">C-x C-s</a></td>
+<td class="left">Salva o <a href="#buffer">buffer</a> corrente caso o mesmo tenha sido modificado</td>
+<td class="left">save-buffer</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-x-C-r" name="C-x-C-r">C-x C-r</a></td>
+<td class="left">Visita um arquivo apenas para leitura, criando um novo <i>buffer</i></td>
+<td class="left">find-file-read-only</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-x-C-w" name="C-x-C-w">C-x C-w</a></td>
+<td class="left">Salva o <a href="#buffer">buffer</a> corrente perguntando antes o nome do arquivo no qual o <a href="#buffer">buffer</a> será salvo</td>
+<td class="left">write-file</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-3-2-3" class="outline-4">
+<h4 id="sec-3-2-3"><span class="section-number-4">3.2.3</span> <a id="Atalhos-para-pesquisa-de-textos-em-um-buffer" name="Atalhos-para-pesquisa-de-textos-em-um-buffer">Atalhos para pesquisa de textos em um buffer</a></h4>
+<div class="outline-text-4" id="text-3-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 3:</span> <a href="#Atalhos-para-pesquisa-de-textos-em-um-buffer">Atalhos para pesquisa de textos em um buffer</a></caption>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Sequencia de teclas</th>
+<th scope="col" class="left">Descrição</th>
+<th scope="col" class="left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left"><a id="C-s" name="C-s">C-s</a></td>
+<td class="left">Procura no <i>buffer</i> corrente pela expressão regular digitada. A procura é feita a partir do <i>point</i> para o final do <i>buffer</i>. <sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup></td>
+<td class="left">isearch-forward-regexp</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-r" name="C-r">C-r</a></td>
+<td class="left">Procura no <i>buffer</i> corrente pela expressão regular digitada. A procura é feita a partir do <i>point</i> para o início do <i>buffer</i>. <sup><a id="fnr.5.100" name="fnr.5.100" class="footref" href="#fn.5">5</a></sup></td>
+<td class="left">isearch-backward-regexp</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-3-2-4" class="outline-4">
+<h4 id="sec-3-2-4"><span class="section-number-4">3.2.4</span> <a id="Atalhos-para-tratar-region" name="Atalhos-para-tratar-region">Atalhos para tratar region</a></h4>
+<div class="outline-text-4" id="text-3-2-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 4:</span> <a href="#Atalhos-para-tratar-region">Atalhos para tratar region</a></caption>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Sequencia de teclas</th>
+<th scope="col" class="left">Descrição</th>
+<th scope="col" class="left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left"><a id="C-spc" name="C-spc">C-spc</a></td>
+<td class="left">Coloca uma <i>marca lógica</i> na posição aonde se encontra o <i>point</i></td>
+<td class="left">set-mark-command</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-x" name="C-x">C-x</a> <a href="#C-x">C-x</a></td>
+<td class="left">O valor da <i>marca lógica</i>   recebe o valor do <i>point</i> e o valor do <i>point</i>   recebe o valor da <i>marca lógica</i></td>
+<td class="left">exchange-point-and-mark</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-3-2-5" class="outline-4">
+<h4 id="sec-3-2-5"><span class="section-number-4">3.2.5</span> <a id="Atalhos-para-navega-o" name="Atalhos-para-navega-o">Atalhos para navegação</a></h4>
+<div class="outline-text-4" id="text-3-2-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 5:</span> <a href="#Atalhos-para-navega-o">Atalhos para navegação</a></caption>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Sequencia de teclas</th>
+<th scope="col" class="left">Descrição</th>
+<th scope="col" class="left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left"><a id="C-f" name="C-f">C-f</a></td>
+<td class="left">Move para o próximo caractere <sup><a id="fnr.6" name="fnr.6" class="footref" href="#fn.6">6</a></sup></td>
+<td class="left">right-char</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-b" name="C-b">C-b</a></td>
+<td class="left">Move para o caractere anterior <sup><a id="fnr.6.100" name="fnr.6.100" class="footref" href="#fn.6">6</a></sup></td>
+<td class="left">left-char</td>
+</tr>
+
+<tr>
+<td class="left"><a id="M-f" name="M-f">M-f</a></td>
+<td class="left">Move para a próxima palavra</td>
+<td class="left">forward-word</td>
+</tr>
+
+<tr>
+<td class="left"><a id="M-b" name="M-b">M-b</a></td>
+<td class="left">Move para a palavra anterior</td>
+<td class="left">backward-word</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-n" name="C-n">C-n</a></td>
+<td class="left">Move para a próxima linha</td>
+<td class="left">next-line</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-p" name="C-p">C-p</a></td>
+<td class="left">Move para a linha anterior</td>
+<td class="left">previous-line</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-a" name="C-a">C-a</a></td>
+<td class="left">Move para o início da linha</td>
+<td class="left">move-beginning-of-line</td>
+</tr>
+
+<tr>
+<td class="left"><a id="home" name="home">home</a></td>
+<td class="left">Move para o início da linha</td>
+<td class="left">move-beginning-of-line</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-e" name="C-e">C-e</a></td>
+<td class="left">Move para o final da linha <sup><a id="fnr.6.100" name="fnr.6.100" class="footref" href="#fn.6">6</a></sup></td>
+<td class="left">move-end-of-line</td>
+</tr>
+
+<tr>
+<td class="left"><a id="end" name="end">end</a></td>
+<td class="left">Move para o final da linha</td>
+<td class="left">move-end-of-line</td>
+</tr>
+
+<tr>
+<td class="left"><a id="M-a" name="M-a">M-a</a></td>
+<td class="left">Move para o inÍcio da sentença</td>
+<td class="left">backward-sentence</td>
+</tr>
+
+<tr>
+<td class="left"><a id="M-e" name="M-e">M-e</a></td>
+<td class="left">Move para o final da sentença</td>
+<td class="left">forward-sentence</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-home" name="C-home">C-home</a></td>
+<td class="left">Move para o início do <i>buffer</i></td>
+<td class="left">beginning-of-buffer</td>
+</tr>
+
+<tr>
+<td class="left">&lt;&lt;&lt;M-'&lt;'&gt;&gt;&gt;</td>
+<td class="left">Move para o início do <i>buffer</i></td>
+<td class="left">beginning-of-buffer</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-end" name="C-end">C-end</a></td>
+<td class="left">Move para o final do <i>buffer</i></td>
+<td class="left">end-of-buffer</td>
+</tr>
+
+<tr>
+<td class="left">&lt;&lt;&lt;M-'&gt;'&gt;&gt;&gt;</td>
+<td class="left">Move para o final do <i>buffer</i></td>
+<td class="left">end-of-buffer</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+Colaboração do Fernando Botelho Fernando.Botelho@F123.org
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+O emacs utiliza o <a href="#mini-buffer">mini buffer</a> para solicitar o comando e a
+tecla tab pode ser utilizada para completar o comando.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+Caso exista algum <i>buffer</i> modificado, o emacs pergunta se o
+mesmo deve ser salvo.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+Caso o emacspeak esteja ativo, o emacs vai anunciar que existe
+um processo sendo executado e vai perguntar ao usuário se a
+finalização deve ser feita mesmo assim.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup> <p class="footpara">
+O emacs faz a procura a medida que a expressão é digitada e o
+emacspeak lê a linha na qual o texto foi encontrado.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.6" name="fn.6" class="footnum" href="#fnr.6">6</a></sup> <p class="footpara">
+Combinação remapeada no emacspeak.
+</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: José Vilmar Estácio de Souza</p>
+<p class="date">Created: 2017-04-23 Sun 21:06</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

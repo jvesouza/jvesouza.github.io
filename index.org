@@ -1,0 +1,262 @@
+#+STARTUP: showeverything
+* Introdução
+Sou usuário do Linux há mais de vinte anos e sempre tive vontade de
+testar o emacs juntamente com o emacspeak. Isso nunca foi possível por
+falta de recursos ou por falta de tempo. Agora que consegui conciliar
+esses dois fatores estou me aventurando nesse mundo. O objetivo
+principal desse documento é transmitir aos leitores algumas noções
+básicas sobre o emacs e o emacspeak, bem como registrar o meu
+aprendizado.
+** emacs
+
+   O GNU emacs, um editor criado por Richard Stallman, teve a sua
+primeira versão lançada em 1985.  Além de ser utilizado como um editor
+de textos para vários tipos de arquivos, o emacs possui recursos que
+permitem a sua utilização como um gerenciador de tarefas.  Podemos por
+exemplo utilizar o emacs para operar em:
++ Arquivos
+  1. Editar
+  2. Copiar
+  3. Remover
+  4. Renomear
+
++ e-mails
+  1. Ler
+  2. Enviar
+
++ Shell
+  1. Executar comandos
+
++ Programas
+  1. Compilar
+  2. Executar
+  3. Depurar a execução
+
++ Navegar na internet
++ E muitas outras operações
+
+Esses recursos permitem que um desenvolvedor possa executar
+praticamente todas as tarefas a partir do emacs sem precisar mudar
+para outro ambiente.
+
+
+** emacspeak [fn:1]
+Em 25 de abril de 1995, T. V. Raman, um funcionário cego da Adobe,
+criou a primeira versão do emacspeak. O emacspeak é uma aplicação
+integrada ao emacs que apresenta usando um sintetizador de voz o
+conteúdo produzido pelo emacs.  Talvez essa seja uma descrição modesta
+do emacspeak, já que ele pode ser considerado um desktop falante que
+inclui além da leitura de tela, ícones sonoros, e uma versatilidade
+praticamente ilimitada.  Por exemplo, numa versão recente, o Raman
+lançou paisagens sonoras, uma opção que ajuda a descansar nossos
+ouvidos depois de um longo dia, permitindo que continuemos usando o
+sistema mas com sons da natureza tocando junto ao sintetizador. O
+autor testou e falou que aliviaram o seu cansaço.
+
+Já foi dito que o Emacs, e por consequência o Emacspeak, são um
+sistema operacional leve e não um editor pesado, por ter tanta
+funcionalidade.
+
+O emacspeak permite que uma pessoa cega possa utilizar um computador a
+partir do emacs, desde que essa pessoa saiba utilizar esse editor.
+
+
+
+** <<<Conceitos utilizados no emacs>>>
+Antes de começar a utilizar o emacs, é preciso conhecer alguns
+conceitos empregados nessa ferramenta.
+*** <<<buffer>>>
+Um objeto utilizado pelo emacs para armazenar algum tipo de texto.
+Toda vez que um arquivo é aberto, o emacs cria um buffer para
+armazenar o conteúdo do arquivo aberto.  Da mesma forma, se visitamos
+um diretório utilizando o emacs, um buffer é criado para armazenar a
+lista de objetos do diretório.  O mesmo vale para quando estamos lendo
+ou enviando e-mails, navegando na internet, lendo a documentação do
+emacs e etc.  Cada buffer criado no emacs possui um nome único, e boa
+parte das operações executadas no emacs atuam no buffer corrente.
+*** <<<point>>>
+A posição atual do cursor no buffer mostra o local aonde a maioria dos
+comandos de edição terão efeito. O emacs se refere a essa posição pelo
+nome de point.  A posição sempre é atualizada quando algo é inserido
+ou removido.  Por padrão, o cursor no buffer corrente é mostrado como
+um bloco sólido e parece estar em um caractere, mas você deve pensar
+no point como se ele estivesse entre dois caracteres; Ele está situado
+antes do caractere sob o cursor.  Por exemplo, no texto 'tste' com o
+cursor sobre o 's', então o point está entre o 't' e o 's' Se
+inserirmos um 'e', esse caractere será inserido antes do 's' e o point
+será posicionado entre o 'e' e o 's', sendo que o cursor permanecerá
+sob o 's'. O emacs possui comandos para mover o point para outra
+posição e cada buffer possui um point individual.  Apenas como
+curiosidade, o termo "point" vem do caractere ".", Que era o comando
+em TECO para acessar a posição de edição. O teco é a linguagem em que
+o Emacs original foi escrito.
+*** <<<mark>>>
+Uma marca lógica colocada na posição do buffer identificada pelo
+point. Essa marca serve para salvar o valor do point no momento em que
+ela foi inserida. Várias marcas podem ser atribuídas.
+*** <<<region>>>
+um bloco de texto no buffer delimitado por um mark e pelo o
+point. Vários comandos do emacs atuam em uma region.
+*** <<<Visitar um arquivo>>>
+Abrir um arquivo para leitura ou para edição. Quando um arquivo é visitado, o seu conteúdo é copiado para um novo buffer.
+*** <<<mini buffer>>>
+Um buffer especial utilizado pelo emacs para interagir com o usuário.
+Quando por exemplo queremos Visitar um arquivo ou executar um comando, 
+o emacs pergunta o nome do arquivo ou o comando a ser executado utilizando o mini buffer.
+O mini buffer também salva o histórico de interações anteriores permitindo
+o reaproveitamento de digitações prévias utilizando comandos do emacs.
+O mini buffer permite ainda que a tecla tab seja utilizada no complemento de 
+comandos do emacs e na digitação do nome de arquivos
+*** <<<Comandos do emacs>>>
+Qualquer operação realizada no emacs é feita através da execução de um
+comando, que pode ou não estar associado à teclas de atalho.  Se
+queremos por exemplo visitar um arquivo, podemos executar o comando
+find-file ou pressionar a combinação de tecla C-x C-f, que por padrão
+está associada ao comando find-file.
+
+Para executar o comando find-file nós pressionamos a combinação  M-x, 
+digitamos find-file e pressionamos a tecla RET (tecla enter).
+Feito isso, o emacs utilizando o mini buffer vai nos pedir o nome
+do arquivo a ser visitado. Digitamos o nome do arquivo e pressionamos RET.
+Será criado um novo [[buffer][buffer]] com o conteúdo do arquivo caso ele exista
+ou um [[buffer][buffer]] vazio caso o arquivo não exista.
+
+A qualquer momento é possível utilizar a tecla tab para completar algo
+faltante.  Podemos pressionar M-x, digitar find-fi e pressionar a
+tecla tab. O emacs vai completar o restante do comando find-file.  O
+mesmo se aplica quando estamos digitando o nome do arquivo a ser
+visitado.  É possível digitar parte do nome do arquivo e pressionar a
+tecla TAB para o complemento.
+
+* Editar um arquivo utilizando o emacs
+Antes de ler essa sessão, recomendamos que você leia a sessão Conceitos utilizados no emacs 
+e a sessão descrição em teclas de atalho no emacs.
+ 
+Para editarmos um arquivo no emacs precisaremos inicialmente copiar o seu conteúdo para um buffer.
+  Para tal devemos utilizar a combinação de teclas C-x C-f. 
+
+Assim que pressionamos essa combinação de teclas,
+o emacs, utilizando o mini buffer, vai solicitar o nome do arquivo a ser visitado.
+Digite o nome do arquivo e pressione a tecla RET para que o emacs copie o seu conteúdo para um novo buffer.
+Caso o arquivo não exista, um buffer vazio será criado.
+** Inserindo e removendo texto de um buffer
+Uma vez criado um buffer  e desde que ele não seja somente para leitura, 
+podemos inserir e remover texto no mesmo sem restrições.
+Qualquer tecla pressionada, desde que não esteja associada a algum comando, 
+terá a sua representação inserida no buffer na posição identificada pelo point.
+
+A tecla del remove o carácter na posição indicada pelo point e a tecla 
+backspace remove o carácter anterior ao carácter indicado pelo point.
+Após a remoção ou a inserção de um caractere, o point será atualizado para refletir a nova posição.
+** Navegando em um buffer
+Além  das setas do teclado normal, existe também um conjunto de Atalhos para navegação em um buffer.
+Todas as teclas de navegação atualizam o point
+ e algumas  foram remapeadas pelo emacspeak.
+Veja uma descrição completa das teclas em Atalhos para navegação.
+
+* <<<Teclas de atalho>>>
+** Descrição
+Boa parte dos comandos no emacs podem ser executados através de teclas
+de atalho.  Existem duas teclas importantes no emacs, a tecla Control
+e a tecla meta, tecla Alt do Windows. Caso o seu teclado não possua a
+tecla Alt ou você não possa utilizá-la por alguma razão, você pode
+fazer uso da tecla escape. A notação para referenciar atalho de teclas
+no emacs usa a seguinte convenção: A letra C com traço e outra letra,
+é Control mais a outra tecla. Por exemplo:
+
+- C-f :: devemos pressionar control+f
+- C-x :: devemos pressionar control+x
+- C-e s :: devemos pressionar control+e e depois a tecla s, liberando antes a tecla control e a tecla e.
+Também é usada a letra M para indicar a tecla que é chamada Meta, ou seja, a tecla mais conhecida como tecla Alt. Por exemplo: 
+- M-x :: devemos pressionar as teclas Alt+x
+- M-r :: devemos pressionar as teclas Alt+r
+
+Caso você não queira ou não possa utilizar a tecla Alt, pressione e
+libera a tecla escape e pressione a tecla x ou r, dependendo do
+exemplo.
+
+** <<<Algumas teclas de atalho do emacs>>>
+A tabela a seguir contem as principais teclas de atalho do emacs bem
+como o comando associado a cada uma delas.
+
+*** <<<Atalhos de uso geral>>>
+#+CAPTION: Atalhos de uso geral
+| Sequencia de teclas | Descrição                          | Comando                    |
+|---------------------+------------------------------------+----------------------------|
+| <<<M-x>>>           | Executa um comando do emacs [fn:2] | execute-extended-command   |
+| <<<C-x C-c>>>       | Finaliza o emacs [fn:3] [fn:4]     | save-buffers-kill-terminal |
+*** <<<Atalhos para tratar arquivos>>>
+#+CAPTION: Atalhos para tratar arquivos
+| Sequencia de teclas | Descrição                                                                               | Comando             |
+|---------------------+-----------------------------------------------------------------------------------------+---------------------|
+| <<<C-x C-f>>>       | Visita um arquivo para edição, criando um novo [[buffer][buffer]]                                   | find-file           |
+| <<<C-x C-s>>>       | Salva o buffer corrente caso o mesmo tenha sido modificado                              | save-buffer         |
+| <<<C-x C-r>>>       | Visita um arquivo apenas para leitura, criando um novo [[buffer][buffer]]                           | find-file-read-only |
+| <<<C-x C-w>>>       | Salva o buffer corrente perguntando antes o nome do arquivo no qual o buffer será salvo | write-file          |
+*** <<<Atalhos para pesquisa de textos em um buffer>>>
+#+CAPTION: Atalhos para pesquisa de textos em um buffer
+| Sequencia de teclas | Descrição                                                                                                                       | Comando                    |
+|---------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------|
+| <<<C-s>>>           | Procura no [[buffer][buffer]] corrente pela expressão regular digitada. A procura é feita a partir do [[point][point]] para o final do [[buffer][buffer]]. [fn:5]  | isearch-forward-regexp     |
+| <<<C-r>>>           | Procura no [[buffer][buffer]] corrente pela expressão regular digitada. A procura é feita a partir do [[point][point]] para o início do [[buffer][buffer]]. [fn:5] | isearch-backward-regexp    |
+*** <<<Atalhos para tratar region>>>
+#+CAPTION: Atalhos para tratar region
+| Sequencia de teclas | Descrição                                                                                                                       | Comando                    |
+|---------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------|
+| <<<C-spc>>> | Coloca uma [[mark][marca lógica]] na posição aonde se encontra o [[point][point]]                                                                    | set-mark-command           |
+| <<<C-x>>> C-x       | O valor da [[mark][marca lógica]]   recebe o valor do [[point][point]] e o valor do [[point][point]]   recebe o valor da [[mark][marca lógica]]                           | exchange-point-and-mark    |
+*** <<<Atalhos para navegação>>>
+#+CAPTION: Atalhos para navegação
+| Sequencia de teclas | Descrição                             | Comando                |
+|---------------------+---------------------------------------+------------------------|
+| <<<C-f>>>           | Move para o próximo caractere [fn:6]  | right-char             |
+| <<<C-b>>>           | Move para o caractere anterior [fn:6] | left-char              |
+| <<<M-f>>>           | Move para a próxima palavra           | forward-word           |
+| <<<M-b>>>           | Move para a palavra anterior          | backward-word          |
+| <<<C-n>>>           | Move para a próxima linha             | next-line              |
+| <<<C-p>>>           | Move para a linha anterior            | previous-line          |
+| <<<C-a>>>           | Move para o início da linha           | move-beginning-of-line |
+| <<<home>>>          | Move para o início da linha           | move-beginning-of-line |
+| <<<C-e>>>           | Move para o final da linha [fn:6]     | move-end-of-line       |
+| <<<end>>>           | Move para o final da linha            | move-end-of-line       |
+| <<<M-a>>>           | Move para o inÍcio da sentença        | backward-sentence      |
+| <<<M-e>>>           | Move para o final da sentença         | forward-sentence       |
+| <<<C-home>>>        | Move para o início do [[buffer][buffer]]          | beginning-of-buffer    |
+| <<<M-'<'>>>         | Move para o início do [[buffer][buffer]]          | beginning-of-buffer    |
+| <<<C-end>>>         | Move para o final do [[buffer][buffer]]           | end-of-buffer          |
+| <<<M-'>'>>>        | Move para o final do [[buffer][buffer]]           | end-of-buffer          |
+
+* Footnotes
+
+[fn:1] Colaboração do Fernando Botelho Fernando.Botelho@F123.org
+
+[fn:2] O emacs utiliza o mini buffer para solicitar o comando e a
+tecla tab pode ser utilizada para completar o comando.
+
+[fn:3] Caso exista algum [[buffer][buffer]] modificado, o emacs pergunta se o
+mesmo deve ser salvo.
+
+[fn:4] Caso o emacspeak esteja ativo, o emacs vai anunciar que existe
+um processo sendo executado e vai perguntar ao usuário se a
+finalização deve ser feita mesmo assim.
+
+[fn:5] O emacs faz a procura a medida que a expressão é digitada e o
+emacspeak lê a linha na qual o texto foi encontrado.
+
+[fn:6] Combinação remapeada no emacspeak.
+
+
+
+#  LocalWords:  emacs Richard Stallman emacspeak fn e-mails Shell tab
+#  LocalWords:  Raman desktop buffer point tste mark region find-file
+#  LocalWords:  C-x C-f M-x RET Mx find-fi del backspace Control Alt
+#  LocalWords:  Windows control C-e M-r execute-extended-command C-c
+#  LocalWords:  save-buffers-kill-terminal C-s save-buffer C-r C-w
+#  LocalWords:  STARTUP showeverything find-file-read-only write-file
+#  LocalWords:  isearch-forward-regexp isearch-backward-regexp C-b
+#  LocalWords:  C-barra-de-espaço set-mark-command right-char M-f M-b
+#  LocalWords:  exchange-point-and-mark left-char forward-word C-n
+#  LocalWords:  backward-word next-line C-p previous-line C-a home
+#  LocalWords:  move-beginning-of-line move-end-of-line end M-a M-e
+#  LocalWords:  inÍcio backward-sentence forward-sentence C-home
+#  LocalWords:  beginning-of-buffer C-end end-of-buffer Footnotes

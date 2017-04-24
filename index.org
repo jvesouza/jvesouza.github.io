@@ -1,4 +1,6 @@
 #+STARTUP: showeverything
+#+TITLE: emacs/emacspeak
+#+LANGUAGE:pt
 * Introdução
 Sou usuário do Linux há mais de vinte anos e sempre tive vontade de
 testar o emacs juntamente com o emacspeak. Isso nunca foi possível por

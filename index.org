@@ -130,6 +130,20 @@ mesmo se aplica quando estamos digitando o nome do arquivo a ser
 visitado.  É possível digitar parte do nome do arquivo e pressionar a
 tecla TAB para o complemento.
 
+** Obtendo ajuda no emacs
+Uma das boas coisas do emacs é a sua extensa documentação online. A
+qualquer momento é possível acess-la utilizando comandos do
+emacs. Além de podermos acessar a documentação, é possível também
+acessar a documentação dos pacotes instalados, e tudo isso com o apoio
+do emacspeak.  Recomenda-se para pessoas iniciantes acessar o tutorial
+disponível para ter uma boa idéia de como navegar, editar e muito
+mais.
+
+Para acessar a esse tutorial basta pressionar a combinação de teclas
+C-h t.
+
+Consulte a tabela atalhos de ajuda para mais comandos.
+
 * Editar um arquivo utilizando o emacs
 Antes de ler essa sessão, recomendamos que você leia a sessão Conceitos utilizados no emacs 
 e a sessão descrição em teclas de atalho no emacs.
@@ -178,7 +192,7 @@ libera a tecla escape e pressione a tecla x ou r, dependendo do
 exemplo.
 
 ** <<<Algumas teclas de atalho do emacs>>>
-A tabela a seguir contem as principais teclas de atalho do emacs bem
+As tabelas a seguir contem as principais teclas de atalho do emacs bem
 como o comando associado a cada uma delas.
 
 *** <<<Atalhos de uso geral>>>
@@ -228,6 +242,17 @@ como o comando associado a cada uma delas.
 | <<<C-end>>>         | Move para o final do [[buffer][buffer]]           | end-of-buffer          |
 | <<<M-'>'>>>        | Move para o final do [[buffer][buffer]]           | end-of-buffer          |
 
+*** Atalhos de ajuda >>>
+#+CAPTION: Atalhos de ajuda
+| Sequencia de teclas | Descrição                                                           | Comando            |
+|---------------------+---------------------------------------------------------------------+--------------------|
+| C-h t               | Ativa o tutorial do emacs                                           | help-with-tutorial |
+| C-u C-h t           | Ativa o tutorial do emacs, perguntando antes o idioma               | help-with-tutorial |
+| C-h k               | Solicita uma combinação de teclas e exibe a sua documentação [fn:7] | describe-key       |
+| C-h v               | Solicita o nome de uma variavel e exibe a sua documentação [fn:7]   | describe-variable  |
+| C-h f               | Solicita o nome de uma função e exibe a sua documentação [fn:7]     | describe-function  |
+| C-h i               | Ativa o modo info do emacs [fn:8]                                         | info               |
+
 * Footnotes
 
 [fn:1] Colaboração do Fernando Botelho Fernando.Botelho@F123.org
@@ -246,6 +271,10 @@ finalização deve ser feita mesmo assim.
 emacspeak lê a linha na qual o texto foi encontrado.
 
 [fn:6] Combinação remapeada no emacspeak.
+
+[fn:7] Será criado um buffer chamado Help con o comteudo da ajuda.
+
+[fn:8] Um formato de documentaçã que facilita a navegação
 
 
 

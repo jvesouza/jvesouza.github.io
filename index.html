@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
 <head>
 <title>emacs/emacspeak</title>
-<!-- 2017-04-24 Mon 06:44 -->
+<!-- 2017-04-25 Tue 00:36 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="José Vilmar Estácio de Souza" />
@@ -157,6 +157,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-3-7">1.3.7. Comandos do emacs</a></li>
 </ul>
 </li>
+<li><a href="#sec-1-4">1.4. Obtendo ajuda no emacs</a></li>
 </ul>
 </li>
 <li><a href="#sec-2">2. Editar um arquivo utilizando o emacs</a>
@@ -175,6 +176,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-3-2-3">3.2.3. Atalhos para pesquisa de textos em um buffer</a></li>
 <li><a href="#sec-3-2-4">3.2.4. Atalhos para tratar region</a></li>
 <li><a href="#sec-3-2-5">3.2.5. Atalhos para navegação</a></li>
+<li><a href="#sec-3-2-6">3.2.6. Atalhos de ajuda &gt;&gt;&gt;</a></li>
 </ul>
 </li>
 </ul>
@@ -410,6 +412,30 @@ tecla TAB para o complemento.
 </div>
 </div>
 </div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Obtendo ajuda no emacs</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Uma das boas coisas do emacs é a sua extensa documentação online. A
+qualquer momento é possível acess-la utilizando <a href="#Comandos-do-emacs">comandos do
+emacs</a>. Além de podermos acessar a documentação, é possível também
+acessar a documentação dos pacotes instalados, e tudo isso com o apoio
+do emacspeak.  Recomenda-se para pessoas iniciantes acessar o tutorial
+disponível para ter uma boa idéia de como navegar, editar e muito
+mais.
+</p>
+
+<p>
+Para acessar a esse tutorial basta pressionar a combinação de teclas
+C-h t.
+</p>
+
+<p>
+Consulte a tabela atalhos de ajuda para mais comandos.
+</p>
+</div>
+</div>
 </div>
 
 <div id="outline-container-sec-2" class="outline-2">
@@ -508,7 +534,7 @@ exemplo.
 <h3 id="sec-3-2"><span class="section-number-3">3.2</span> <a id="Algumas-teclas-de-atalho-do-emacs" name="Algumas-teclas-de-atalho-do-emacs">Algumas teclas de atalho do emacs</a></h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
-A tabela a seguir contem as principais <a href="#Teclas-de-atalho">teclas de atalho</a> do emacs bem
+As tabelas a seguir contem as principais <a href="#Teclas-de-atalho">teclas de atalho</a> do emacs bem
 como o comando associado a cada uma delas.
 </p>
 </div>
@@ -789,6 +815,67 @@ como o comando associado a cada uma delas.
 </table>
 </div>
 </div>
+
+<div id="outline-container-sec-3-2-6" class="outline-4">
+<h4 id="sec-3-2-6"><span class="section-number-4">3.2.6</span> Atalhos de ajuda &gt;&gt;&gt;</h4>
+<div class="outline-text-4" id="text-3-2-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 6:</span> Atalhos de ajuda</caption>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Sequencia de teclas</th>
+<th scope="col" class="left">Descrição</th>
+<th scope="col" class="left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">C-h t</td>
+<td class="left">Ativa o tutorial do emacs</td>
+<td class="left">help-with-tutorial</td>
+</tr>
+
+<tr>
+<td class="left">C-u C-h t</td>
+<td class="left">Ativa o tutorial do emacs, perguntando antes o idioma</td>
+<td class="left">help-with-tutorial</td>
+</tr>
+
+<tr>
+<td class="left">C-h k</td>
+<td class="left">Solicita uma combinação de teclas e exibe a sua documentação <sup><a id="fnr.7" name="fnr.7" class="footref" href="#fn.7">7</a></sup></td>
+<td class="left">describe-key</td>
+</tr>
+
+<tr>
+<td class="left">C-h v</td>
+<td class="left">Solicita o nome de uma variavel e exibe a sua documentação <sup><a id="fnr.7.100" name="fnr.7.100" class="footref" href="#fn.7">7</a></sup></td>
+<td class="left">describe-variable</td>
+</tr>
+
+<tr>
+<td class="left">C-h f</td>
+<td class="left">Solicita o nome de uma função e exibe a sua documentação <sup><a id="fnr.7.100" name="fnr.7.100" class="footref" href="#fn.7">7</a></sup></td>
+<td class="left">describe-function</td>
+</tr>
+
+<tr>
+<td class="left">C-h i</td>
+<td class="left">Ativa o modo info do emacs <sup><a id="fnr.8" name="fnr.8" class="footref" href="#fn.8">8</a></sup></td>
+<td class="left">info</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div id="footnotes">
@@ -824,12 +911,20 @@ emacspeak lê a linha na qual o texto foi encontrado.
 Combinação remapeada no emacspeak.
 </p></div>
 
+<div class="footdef"><sup><a id="fn.7" name="fn.7" class="footnum" href="#fnr.7">7</a></sup> <p class="footpara">
+Será criado um <a href="#buffer">buffer</a> chamado Help con o comteudo da ajuda.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.8" name="fn.8" class="footnum" href="#fnr.8">8</a></sup> <p class="footpara">
+Um formato de documentaçã que facilita a navegação
+</p></div>
+
 
 </div>
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: José Vilmar Estácio de Souza</p>
-<p class="date">Created: 2017-04-24 Mon 06:44</p>
+<p class="date">Created: 2017-04-25 Tue 00:36</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

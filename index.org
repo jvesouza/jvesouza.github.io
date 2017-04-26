@@ -149,6 +149,13 @@ C-h t.
 
 Consulte a tabela atalhos de ajuda para mais comandos.
 
+*** <<< buffer de ajuda>>>
+Alguns comandos de ajuda do emacs utilizam um buffer chamado help para
+armazenar o conteudo da ajuda. Esse buffer é criado automaticamente
+pelo emacs e assim que é povoado é lido pelo o emacspeak. O buffer
+help pode ser acessado como qualquer buffer e o seu conteudo
+pode ser explorado e copiado como o conteúdo de qualquer buffer.
+
 * Editar um arquivo utilizando o emacs
 Antes de ler essa sessão, recomendamos que você leia a sessão Conceitos utilizados no emacs 
 e a sessão descrição em teclas de atalho no emacs.
@@ -277,7 +284,7 @@ emacspeak lê a linha na qual o texto foi encontrado.
 
 [fn:6] Combinação remapeada no emacspeak.
 
-[fn:7] Será criado um buffer chamado Help con o comteudo da ajuda.
+[fn:7] Adocumentação será copiada para o buffer de ajuda.
 
 [fn:8] Um formato de documentaçã que facilita a navegação
 

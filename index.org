@@ -77,7 +77,7 @@ ou enviando e-mails, navegando na internet, lendo a documentação do
 emacs e etc.  Cada buffer criado no emacs possui um nome único, e boa
 parte das operações executadas no emacs atuam no buffer corrente.
 *** <<<point>>>
-A posição atual do cursor no buffer mostra o local aonde a maioria dos
+A posição atual no buffer aonde a maioria dos
 comandos de edição terão efeito. O emacs se refere a essa posição pelo
 nome de point.  A posição sempre é atualizada quando algo é inserido
 ou removido.  Por padrão, o cursor no buffer corrente é mostrado como
@@ -100,7 +100,7 @@ ela foi inserida. Várias marcas podem ser atribuídas.
 um bloco de texto no buffer delimitado por um mark e pelo o
 point. Vários comandos do emacs atuam em uma region.
 *** <<<Kill Ring>>>
-O Kill Ring é um objeto utilizado por alguns comandos do emacs para
+O Kill Ring é um objeto único utilizado por alguns comandos do emacs para
 armazenar blocos de texto. Podemos por exemplo definir uma region e
 copiá-la para o Kill Ring. Alguns comandos utilizados para remover
 texto também copiam o texto removido para esse objeto. Por padrão, até
@@ -190,7 +190,21 @@ backspace remove o caractere que está a esquerda do point.  Após a
 remoção ou a inserção, o point será atualizado para refletir a nova
 posição. Caso exista um mark ativo, as teclas del e backspace vão
 remover a region delimitada pelo mark e o point ao invés de
-simplesmente remover o caractere.
+simplesmente remover o caractere. O texto removido por essas teclas não será salvo no Kill Ring.
+** copiar e colar texto em um buffer
+Existem comandos do emacs que copiam texto para o Kill Ring.  Uma vez
+que o texto está armazenado no Kill Ring, podemos copiar esse texto
+para qualquer buffer que suporte edição. O emacs dá ao  processo
+de cópia o nome de Yank.
+
+Podemos por exemplo criar uma region pressionando c-spc e mover o
+point para uma posição qualquer do buffer, e pressionar a sequencia de
+teclas M-w. O texto entre o mark e o point será copiado para o Kill
+Ring. Agora podemos mover o point para outra posição do buffer ou de
+um outro buffer e pressionar a sequencia de teclas c-y. O último texto
+salvo no Kill Ring será copiado para a posição indicada pelo
+point. Caso o texto a ser copiado para o buffer não seja o último
+salvo, basta pressionarmos M-y após termos pressionado C-y. 
 
 ** Navegando em um buffer
 Além  das setas do teclado normal, existe também um conjunto de Atalhos para navegação em um buffer.

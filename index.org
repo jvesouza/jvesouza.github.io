@@ -131,17 +131,18 @@ visitado.  É possível digitar parte do nome do arquivo e pressionar a
 tecla TAB para o complemento.
 
 ** Obtendo ajuda no emacs
-Uma das boas coisas do emacs é a sua extensa documentação online. A
-qualquer momento é possível acess-la utilizando comandos do
-emacs. Além de podermos acessar a documentação, é possível também
-acessar a documentação dos pacotes instalados, e tudo isso com o apoio
-do emacspeak. Um dos problemas dessa documentação é que ela está
-geralmente em inglês, o que pode ser um problema para quem não tem
-algum conhecimento desse idioma.
+Uma das boas coisas do emacs é a sua extensa documentação, disponível
+mesmo que não haja conexão com a internet. A qualquer momento é
+possível acessá-la utilizando comandos do emacs. Além de podermos
+acessar a documentação, é possível também acessar a documentação dos
+pacotes instalados, e tudo isso com o apoio do emacspeak. Um dos
+problemas dessa documentação é que ela está geralmente em inglês, o
+que pode ser um problema para quem não tem algum conhecimento desse
+idioma.
 
-O emacs possui um totorial muito interessante que deve ser acessado
+O emacs possui um tutorial muito interessante que deve ser consultado
 por quem quer se iniciar nessa ferramenta.  Esse tutorial fornece uma
-boa idéia de como navegar nos buffers, editar, procurar e substituir
+boa ideia de como navegar nos buffers, editar, procurar e substituir
 textos, alternar entre buffers e muito mais.
 
 Para acessar a esse tutorial basta pressionar a combinação de teclas

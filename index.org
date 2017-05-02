@@ -150,7 +150,7 @@ C-h t.
 
 Consulte a tabela atalhos de ajuda para mais comandos.
 
-*** <<< buffer de ajuda>>>
+*** <<<buffer de ajuda>>>
 Alguns comandos de ajuda do emacs utilizam um buffer chamado help para
 armazenar o conteudo da ajuda. Esse buffer é criado automaticamente
 pelo emacs e assim que é povoado é lido pelo o emacspeak. O buffer
@@ -259,12 +259,12 @@ como o comando associado a cada uma delas.
 #+CAPTION: Atalhos de ajuda
 | Sequencia de teclas | Descrição                                                           | Comando            |
 |---------------------+---------------------------------------------------------------------+--------------------|
-| C-h t               | Ativa o tutorial do emacs                                           | help-with-tutorial |
-| C-u C-h t           | Ativa o tutorial do emacs, perguntando antes o idioma               | help-with-tutorial |
-| C-h k               | Solicita uma combinação de teclas e exibe a sua documentação [fn:7] | describe-key       |
-| C-h v               | Solicita o nome de uma variavel e exibe a sua documentação [fn:7]   | describe-variable  |
-| C-h f               | Solicita o nome de uma função e exibe a sua documentação [fn:7]     | describe-function  |
-| C-h i               | Ativa o modo info do emacs [fn:8]                                         | info               |
+| <<<C-h t>>>         | Ativa o tutorial do emacs                                           | help-with-tutorial |
+| <<<C-u C-h t>>>     | Ativa o tutorial do emacs, perguntando antes o idioma               | help-with-tutorial |
+| <<<C-h k>>>         | Solicita uma combinação de teclas e exibe a sua documentação [fn:7] | describe-key       |
+| <<<C-h v>>>         | Solicita o nome de uma variavel e exibe a sua documentação [fn:7]   | describe-variable  |
+| <<<C-h f>>>         | Solicita o nome de uma função e exibe a sua documentação [fn:7]     | describe-function  |
+| <<<C-h i>>>         | Ativa o modo info do emacs [fn:8]                                         | info               |
 
 * Footnotes
 
@@ -285,9 +285,9 @@ emacspeak lê a linha na qual o texto foi encontrado.
 
 [fn:6] Combinação remapeada no emacspeak.
 
-[fn:7] Adocumentação será copiada para o buffer de ajuda.
+[fn:7] Adocumentação será copiada para o [[buffer de ajuda][buffer de ajuda]].
 
-[fn:8] Um formato de documentaçã que facilita a navegação
+[fn:8] Um formato de documentação que facilita a navegação
 
 
 

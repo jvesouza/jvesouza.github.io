@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
 <head>
 <title>emacs/emacspeak</title>
-<!-- 2017-05-02 Tue 06:02 -->
+<!-- 2017-05-02 Tue 06:38 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="José Vilmar Estácio de Souza" />
@@ -152,9 +152,11 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-3-2">1.3.2. point</a></li>
 <li><a href="#sec-1-3-3">1.3.3. mark</a></li>
 <li><a href="#sec-1-3-4">1.3.4. region</a></li>
-<li><a href="#sec-1-3-5">1.3.5. Visitar um arquivo</a></li>
-<li><a href="#sec-1-3-6">1.3.6. mini buffer</a></li>
-<li><a href="#sec-1-3-7">1.3.7. Comandos do emacs</a></li>
+<li><a href="#sec-1-3-5">1.3.5. Kill Ring</a></li>
+<li><a href="#sec-1-3-6">1.3.6.  Yank </a></li>
+<li><a href="#sec-1-3-7">1.3.7. Visitar um arquivo</a></li>
+<li><a href="#sec-1-3-8">1.3.8. mini buffer</a></li>
+<li><a href="#sec-1-3-9">1.3.9. Comandos do emacs</a></li>
 </ul>
 </li>
 <li><a href="#sec-1-4">1.4. Obtendo ajuda no emacs</a>
@@ -364,16 +366,37 @@ um bloco de texto no <a href="#buffer">buffer</a> delimitado por um <a href="#ma
 </div>
 </div>
 <div id="outline-container-sec-1-3-5" class="outline-4">
-<h4 id="sec-1-3-5"><span class="section-number-4">1.3.5</span> <a id="Visitar-um-arquivo" name="Visitar-um-arquivo">Visitar um arquivo</a></h4>
+<h4 id="sec-1-3-5"><span class="section-number-4">1.3.5</span> <a id="Kill-Ring" name="Kill-Ring">Kill Ring</a></h4>
 <div class="outline-text-4" id="text-1-3-5">
+<p>
+O <a href="#Kill-Ring">Kill Ring</a> é um objeto utilizado por alguns <a href="#Comandos-do-emacs">comandos do emacs</a> para
+armazenar blocos de texto. Podemos por exemplo definir uma <a href="#region">region</a> e
+copiá-la para o <a href="#Kill-Ring">Kill Ring</a>. Alguns comandos utilizados para remover
+texto também copiam o texto removido para esse objeto. Por padrão, até
+60 blocos podem ser armazenados.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-6" class="outline-4">
+<h4 id="sec-1-3-6"><span class="section-number-4">1.3.6</span> <a id="Yank" name="Yank"> Yank </a></h4>
+<div class="outline-text-4" id="text-1-3-6">
+<p>
+É o processo de copiar um bloco de texto armazenado no <a href="#Kill-Ring">Kill Ring</a> para
+um <a href="#buffer">buffer</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-7" class="outline-4">
+<h4 id="sec-1-3-7"><span class="section-number-4">1.3.7</span> <a id="Visitar-um-arquivo" name="Visitar-um-arquivo">Visitar um arquivo</a></h4>
+<div class="outline-text-4" id="text-1-3-7">
 <p>
 Abrir um arquivo para leitura ou para edição. Quando um arquivo é visitado, o seu conteúdo é copiado para um novo <a href="#buffer">buffer</a>.
 </p>
 </div>
 </div>
-<div id="outline-container-sec-1-3-6" class="outline-4">
-<h4 id="sec-1-3-6"><span class="section-number-4">1.3.6</span> <a id="mini-buffer" name="mini-buffer">mini buffer</a></h4>
-<div class="outline-text-4" id="text-1-3-6">
+<div id="outline-container-sec-1-3-8" class="outline-4">
+<h4 id="sec-1-3-8"><span class="section-number-4">1.3.8</span> <a id="mini-buffer" name="mini-buffer">mini buffer</a></h4>
+<div class="outline-text-4" id="text-1-3-8">
 <p>
 Um <a href="#buffer">buffer</a> especial utilizado pelo emacs para interagir com o usuário.
 Quando por exemplo queremos <a href="#Visitar-um-arquivo">Visitar um arquivo</a> ou executar um comando, 
@@ -385,9 +408,9 @@ O <a href="#mini-buffer">mini buffer</a> permite ainda que a tecla tab seja util
 </p>
 </div>
 </div>
-<div id="outline-container-sec-1-3-7" class="outline-4">
-<h4 id="sec-1-3-7"><span class="section-number-4">1.3.7</span> <a id="Comandos-do-emacs" name="Comandos-do-emacs">Comandos do emacs</a></h4>
-<div class="outline-text-4" id="text-1-3-7">
+<div id="outline-container-sec-1-3-9" class="outline-4">
+<h4 id="sec-1-3-9"><span class="section-number-4">1.3.9</span> <a id="Comandos-do-emacs" name="Comandos-do-emacs">Comandos do emacs</a></h4>
+<div class="outline-text-4" id="text-1-3-9">
 <p>
 Qualquer operação realizada no emacs é feita através da execução de um
 comando, que pode ou não estar associado à <a href="#Teclas-de-atalho">teclas de atalho</a>.  Se
@@ -955,7 +978,7 @@ Um formato de documentação que facilita a navegação
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: José Vilmar Estácio de Souza</p>
-<p class="date">Created: 2017-05-02 Tue 06:02</p>
+<p class="date">Created: 2017-05-02 Tue 06:38</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.2.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

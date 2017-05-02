@@ -99,6 +99,15 @@ ela foi inserida. Várias marcas podem ser atribuídas.
 *** <<<region>>>
 um bloco de texto no buffer delimitado por um mark e pelo o
 point. Vários comandos do emacs atuam em uma region.
+*** <<<Kill Ring>>>
+O Kill Ring é um objeto utilizado por alguns comandos do emacs para
+armazenar blocos de texto. Podemos por exemplo definir uma region e
+copiá-la para o Kill Ring. Alguns comandos utilizados para remover
+texto também copiam o texto removido para esse objeto. Por padrão, até
+60 blocos podem ser armazenados.
+*** <<< Yank >>>
+É o processo de copiar um bloco de texto armazenado no Kill Ring para
+um buffer.
 *** <<<Visitar um arquivo>>>
 Abrir um arquivo para leitura ou para edição. Quando um arquivo é visitado, o seu conteúdo é copiado para um novo buffer.
 *** <<<mini buffer>>>

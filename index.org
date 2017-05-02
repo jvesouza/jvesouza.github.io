@@ -164,19 +164,25 @@ e a sessão descrição em teclas de atalho no emacs.
 Para editarmos um arquivo no emacs precisaremos inicialmente copiar o seu conteúdo para um buffer.
   Para tal devemos utilizar a combinação de teclas C-x C-f. 
 
-Assim que pressionamos essa combinação de teclas,
-o emacs, utilizando o mini buffer, vai solicitar o nome do arquivo a ser visitado.
-Digite o nome do arquivo e pressione a tecla RET para que o emacs copie o seu conteúdo para um novo buffer.
-Caso o arquivo não exista, um buffer vazio será criado.
+Assim que pressionamos essa combinação de teclas, o emacs, utilizando
+o mini buffer, vai solicitar o nome do arquivo a ser visitado.  Digite
+o nome do arquivo e pressione a tecla RET para que o emacs copie o seu
+conteúdo para um novo buffer.  Caso o arquivo não exista, um buffer
+vazio será criado. Não custa lembrar que o emacs não altera
+diretamente um arquivo, mas sim um buffer.
 ** Inserindo e removendo texto de um buffer
 Uma vez criado um buffer  e desde que ele não seja somente para leitura, 
 podemos inserir e remover texto no mesmo sem restrições.
 Qualquer tecla pressionada, desde que não esteja associada a algum comando, 
 terá a sua representação inserida no buffer na posição identificada pelo point.
 
-A tecla del remove o carácter na posição indicada pelo point e a tecla 
-backspace remove o carácter anterior ao carácter indicado pelo point.
-Após a remoção ou a inserção de um caractere, o point será atualizado para refletir a nova posição.
+A tecla del remove o caractere que está a direita do point e a tecla
+backspace remove o caractere que está a esquerda do point.  Após a
+remoção ou a inserção, o point será atualizado para refletir a nova
+posição. Caso exista um mark ativo, as teclas del e backspace vão
+remover a region delimitada pelo mark e o point ao invés de
+simplesmente remover o caractere.
+
 ** Navegando em um buffer
 Além  das setas do teclado normal, existe também um conjunto de Atalhos para navegação em um buffer.
 Todas as teclas de navegação atualizam o point

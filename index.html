@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
 <head>
 <title>emacs/emacspeak</title>
-<!-- 2017-05-02 Tue 09:43 -->
+<!-- 2017-05-07 Sun 06:06 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="José Vilmar Estácio de Souza" />
@@ -153,7 +153,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-3-3">1.3.3. mark</a></li>
 <li><a href="#sec-1-3-4">1.3.4. region</a></li>
 <li><a href="#sec-1-3-5">1.3.5. Kill Ring</a></li>
-<li><a href="#sec-1-3-6">1.3.6.  Yank </a></li>
+<li><a href="#sec-1-3-6">1.3.6. Yank</a></li>
 <li><a href="#sec-1-3-7">1.3.7. Visitar um arquivo</a></li>
 <li><a href="#sec-1-3-8">1.3.8. mini buffer</a></li>
 <li><a href="#sec-1-3-9">1.3.9. Comandos do emacs</a></li>
@@ -168,7 +168,12 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#sec-2">2. Editar um arquivo utilizando o emacs</a>
 <ul>
-<li><a href="#sec-2-1">2.1. Inserindo e removendo texto de um buffer</a></li>
+<li><a href="#sec-2-1">2.1. Inserindo e removendo texto de um buffer</a>
+<ul>
+<li><a href="#sec-2-1-1">2.1.1. Inserindo texto</a></li>
+<li><a href="#sec-2-1-2">2.1.2. Removendo texto</a></li>
+</ul>
+</li>
 <li><a href="#sec-2-2">2.2. copiar e colar texto em um buffer</a></li>
 <li><a href="#sec-2-3">2.3. Navegando em um buffer</a></li>
 </ul>
@@ -183,7 +188,8 @@ for the JavaScript code in this tag.
 <li><a href="#sec-3-2-3">3.2.3. Atalhos para pesquisa de textos em um buffer</a></li>
 <li><a href="#sec-3-2-4">3.2.4. Atalhos para tratar region</a></li>
 <li><a href="#sec-3-2-5">3.2.5. Atalhos para navegação</a></li>
-<li><a href="#sec-3-2-6">3.2.6. Atalhos de ajuda &gt;&gt;&gt;</a></li>
+<li><a href="#sec-3-2-6">3.2.6. Atalhos de inserção de texto</a></li>
+<li><a href="#sec-3-2-7">3.2.7. Atalhos de ajuda</a></li>
 </ul>
 </li>
 </ul>
@@ -379,7 +385,7 @@ texto também copiam o texto removido para esse objeto. Por padrão, até
 </div>
 </div>
 <div id="outline-container-sec-1-3-6" class="outline-4">
-<h4 id="sec-1-3-6"><span class="section-number-4">1.3.6</span> <a id="Yank" name="Yank"> Yank </a></h4>
+<h4 id="sec-1-3-6"><span class="section-number-4">1.3.6</span> <a id="Yank" name="Yank">Yank</a></h4>
 <div class="outline-text-4" id="text-1-3-6">
 <p>
 É o processo de copiar um bloco de texto armazenado no <a href="#Kill-Ring">Kill Ring</a> para
@@ -468,7 +474,7 @@ Para acessar a esse tutorial basta pressionar a combinação de teclas
 </p>
 
 <p>
-Consulte a tabela atalhos de ajuda para mais comandos.
+Consulte a tabela <a href="#Atalhos-de-ajuda">atalhos de ajuda</a> para mais comandos.
 </p>
 </div>
 
@@ -515,18 +521,40 @@ diretamente um arquivo, mas sim um <a href="#buffer">buffer</a>.
 <p>
 Uma vez criado um <a href="#buffer">buffer</a>  e desde que ele não seja somente para leitura, 
 podemos inserir e remover texto no mesmo sem restrições.
-Qualquer tecla pressionada, desde que não esteja associada a algum comando, 
-terá a sua representação inserida no <a href="#buffer">buffer</a> na posição identificada pelo <a href="#point">point</a>.
+</p>
+</div>
+<div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> Inserindo texto</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Qualquer tecla pressionada, desde que não esteja associada a algum
+comando, terá a sua representação inserida no <a href="#buffer">buffer</a> na posição
+identificada pelo <a href="#point">point</a>. Ou seja: para inserir texto em um <a href="#buffer">buffer</a>
+basta digitar o texto desejado. Podemos fornecer um fator de repetição
+para um caractere a ser inserido e o emacs vai inseri-lo N vezes, de
+acordo com o fator de repetição. Para inserirmos por exemplo 50 '*',
+pressionamos C-u 50 *.
 </p>
 
+<p>
+ O emacs possui ainda comandos que inserem texto em um <a href="#buffer">buffer</a>.  É
+possível inserir texto a partir do <a href="#Kill-Ring">Kill Ring</a> ou de um outro arquivo
+existente.  Consulte a tabela <a href="#Atalhos-de-inser-o-de-texto">Atalhos de inserção de texto</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2"><span class="section-number-4">2.1.2</span> Removendo texto</h4>
+<div class="outline-text-4" id="text-2-1-2">
 <p>
 A tecla del remove o caractere que está a direita do <a href="#point">point</a> e a tecla
 backspace remove o caractere que está a esquerda do <a href="#point">point</a>.  Após a
 remoção ou a inserção, o <a href="#point">point</a> será atualizado para refletir a nova
 posição. Caso exista um <a href="#mark">mark</a> ativo, as teclas del e backspace vão
 remover a <a href="#region">region</a> delimitada pelo <a href="#mark">mark</a> e o <a href="#point">point</a> ao invés de
-simplesmente remover o caractere. O texto removido por essas teclas não será salvo no <a href="#Kill-Ring">Kill Ring</a>.
+simplesmente remover o caractere. O texto removido por essas teclas não será salvo no <a href="#Kill-Ring">Kill Ring</a>. Caso se queira remover um texto e copiar o mesmo para o <a href="#Kill-Ring">Kill Ring</a>, pressionamos C-w.
 </p>
+</div>
 </div>
 </div>
 <div id="outline-container-sec-2-2" class="outline-3">
@@ -536,7 +564,7 @@ simplesmente remover o caractere. O texto removido por essas teclas não será s
 Existem <a href="#Comandos-do-emacs">comandos do emacs</a> que copiam texto para o <a href="#Kill-Ring">Kill Ring</a>.  Uma vez
 que o texto está armazenado no <a href="#Kill-Ring">Kill Ring</a>, podemos copiar esse texto
 para qualquer <a href="#buffer">buffer</a> que suporte edição. O emacs dá ao  processo
-de cópia o nome de Yank.
+de cópia o nome de <a href="#Yank">Yank</a>.
 </p>
 
 <p>
@@ -544,10 +572,10 @@ Podemos por exemplo criar uma <a href="#region">region</a> pressionando <a href=
 <a href="#point">point</a> para uma posição qualquer do <a href="#buffer">buffer</a>, e pressionar a sequencia de
 teclas M-w. O texto entre o <a href="#mark">mark</a> e o <a href="#point">point</a> será copiado para o Kill
 Ring. Agora podemos mover o <a href="#point">point</a> para outra posição do <a href="#buffer">buffer</a> ou de
-um outro <a href="#buffer">buffer</a> e pressionar a sequencia de teclas c-y. O último texto
+um outro <a href="#buffer">buffer</a> e pressionar a sequencia de teclas <a href="#C-y">c-y</a>. O último texto
 salvo no <a href="#Kill-Ring">Kill Ring</a> será copiado para a posição indicada pelo
 <a href="#point">point</a>. Caso o texto a ser copiado para o <a href="#buffer">buffer</a> não seja o último
-salvo, basta pressionarmos M-y após termos pressionado C-y. 
+salvo, basta pressionarmos <a href="#M-y">M-y</a> após termos pressionado <a href="#C-y">C-y</a>. 
 </p>
 </div>
 </div>
@@ -892,12 +920,54 @@ como o comando associado a cada uma delas.
 </table>
 </div>
 </div>
-
 <div id="outline-container-sec-3-2-6" class="outline-4">
-<h4 id="sec-3-2-6"><span class="section-number-4">3.2.6</span> Atalhos de ajuda &gt;&gt;&gt;</h4>
+<h4 id="sec-3-2-6"><span class="section-number-4">3.2.6</span> <a id="Atalhos-de-inser-o-de-texto" name="Atalhos-de-inser-o-de-texto">Atalhos de inserção de texto</a></h4>
 <div class="outline-text-4" id="text-3-2-6">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<caption class="t-above"><span class="table-number">Table 6:</span> Atalhos de ajuda</caption>
+<caption class="t-above"><span class="table-number">Table 6:</span> <a href="#Atalhos-de-inser-o-de-texto">Atalhos de inserção de texto</a></caption>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Sequencia de teclas</th>
+<th scope="col" class="left">Descrição</th>
+<th scope="col" class="left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left"><a id="C-y" name="C-y">C-y</a></td>
+<td class="left">Copia o último texto presente no <a href="#Kill-Ring">Kill Ring</a> para a posição indicada pelo <a href="#point">point</a></td>
+<td class="left"><a href="#Yank">yank</a></td>
+</tr>
+
+<tr>
+<td class="left"><a id="M-y" name="M-y">M-y</a></td>
+<td class="left">Executado após um <a href="#Yank">yank</a>,, copia o texto anterior</td>
+<td class="left">yank-pop</td>
+</tr>
+
+<tr>
+<td class="left"><a id="C-i" name="C-i">C-i</a></td>
+<td class="left">Insere o conteudo de umarquivo na posição indicada pelo <a href="#point">point</a></td>
+<td class="left">insert-file</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2-7" class="outline-4">
+<h4 id="sec-3-2-7"><span class="section-number-4">3.2.7</span> <a id="Atalhos-de-ajuda" name="Atalhos-de-ajuda">Atalhos de ajuda</a></h4>
+<div class="outline-text-4" id="text-3-2-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 7:</span> <a href="#Atalhos-de-ajuda">Atalhos de ajuda</a></caption>
 
 <colgroup>
 <col  class="left" />
@@ -1001,7 +1071,7 @@ Um formato de documentação que facilita a navegação
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: José Vilmar Estácio de Souza</p>
-<p class="date">Created: 2017-05-02 Tue 09:43</p>
+<p class="date">Created: 2017-05-07 Sun 06:06</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.2.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

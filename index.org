@@ -105,7 +105,7 @@ armazenar blocos de texto. Podemos por exemplo definir uma region e
 copiá-la para o Kill Ring. Alguns comandos utilizados para remover
 texto também copiam o texto removido para esse objeto. Por padrão, até
 60 blocos podem ser armazenados.
-*** <<< Yank >>>
+*** <<<Yank>>>
 É o processo de copiar um bloco de texto armazenado no Kill Ring para
 um buffer.
 *** <<<Visitar um arquivo>>>
@@ -182,15 +182,25 @@ diretamente um arquivo, mas sim um buffer.
 ** Inserindo e removendo texto de um buffer
 Uma vez criado um buffer  e desde que ele não seja somente para leitura, 
 podemos inserir e remover texto no mesmo sem restrições.
-Qualquer tecla pressionada, desde que não esteja associada a algum comando, 
-terá a sua representação inserida no buffer na posição identificada pelo point.
+*** Inserindo texto
+Qualquer tecla pressionada, desde que não esteja associada a algum
+comando, terá a sua representação inserida no buffer na posição
+identificada pelo point. Ou seja: para inserir texto em um buffer
+basta digitar o texto desejado. Podemos fornecer um fator de repetição
+para um caractere a ser inserido e o emacs vai inseri-lo N vezes, de
+acordo com o fator de repetição. Para inserirmos por exemplo 50 '*',
+pressionamos C-u 50 *.
 
+ O emacs possui ainda comandos que inserem texto em um buffer.  É
+possível inserir texto a partir do Kill Ring ou de um outro arquivo
+existente.  Consulte a tabela Atalhos de inserção de texto
+*** Removendo texto
 A tecla del remove o caractere que está a direita do point e a tecla
 backspace remove o caractere que está a esquerda do point.  Após a
 remoção ou a inserção, o point será atualizado para refletir a nova
 posição. Caso exista um mark ativo, as teclas del e backspace vão
 remover a region delimitada pelo mark e o point ao invés de
-simplesmente remover o caractere. O texto removido por essas teclas não será salvo no Kill Ring.
+simplesmente remover o caractere. O texto removido por essas teclas não será salvo no Kill Ring. Caso se queira remover um texto e copiar o mesmo para o Kill Ring, pressionamos C-w.
 ** copiar e colar texto em um buffer
 Existem comandos do emacs que copiam texto para o Kill Ring.  Uma vez
 que o texto está armazenado no Kill Ring, podemos copiar esse texto
@@ -283,8 +293,15 @@ como o comando associado a cada uma delas.
 | <<<M-'<'>>>         | Move para o início do [[buffer][buffer]]          | beginning-of-buffer    |
 | <<<C-end>>>         | Move para o final do [[buffer][buffer]]           | end-of-buffer          |
 | <<<M-'>'>>>        | Move para o final do [[buffer][buffer]]           | end-of-buffer          |
+*** <<<Atalhos de inserção de texto>>>
+#+CAPTION: Atalhos de inserção de texto
+| Sequencia de teclas | Descrição                                                                     | Comando  |
+|---------------------+-------------------------------------------------------------------------------+----------|
+| <<<C-y>>>           | Copia o último texto presente no Kill Ring para a posição indicada pelo point | yank     |
+| <<<M-y>>>           | Executado após um yank,, copia o texto anterior                               | yank-pop  |
+| <<<C-i>>>           | Insere o conteudo de umarquivo na posição indicada pelo point                 | insert-file |
 
-*** Atalhos de ajuda >>>
+*** <<<Atalhos de ajuda>>>
 #+CAPTION: Atalhos de ajuda
 | Sequencia de teclas | Descrição                                                           | Comando            |
 |---------------------+---------------------------------------------------------------------+--------------------|
@@ -331,5 +348,5 @@ emacspeak lê a linha na qual o texto foi encontrado.
 #  LocalWords:  exchange-point-and-mark left-char forward-word C-n
 #  LocalWords:  backward-word next-line C-p previous-line C-a home
 #  LocalWords:  move-beginning-of-line move-end-of-line end M-a M-e
-#  LocalWords:  inÍcio backward-sentence forward-sentence C-home
+#  LocalWords:  inÍcio backward-sentence forward-sentence C-home C-y
 #  LocalWords:  beginning-of-buffer C-end end-of-buffer Footnotes
